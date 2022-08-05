@@ -1,0 +1,14 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    <h1>day la template cua taboo </h1>
+    <h2> Tao la {{ name }} </h2>
+    <ul>
+        {% for item in taisan %}
+            {% if item != 'cuc ki nhieu tien ' %}
+                <li>{{ item }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    {% endblock %}

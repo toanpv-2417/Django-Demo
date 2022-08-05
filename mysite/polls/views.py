@@ -6,5 +6,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('hello conb cac 111')
-
+    myname = "Toan ne!"
+    taisan = ['Tien', 'may tinh', 'maybay','cuc ki nhieu tien ']
+    context = {"name": myname, "taisan": taisan}
+    return render(request, "polls/index.html", context)
