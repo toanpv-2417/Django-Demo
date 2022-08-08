@@ -1,0 +1,11 @@
+{% extends 'polls/base.html' %}
+
+{% block content123 %}
+    {% if dsquest %}
+        {% for item in dsquest %}
+            <a href="{% url 'detail' item.id %}"><p>{{ item.question_text }} - {{item.id}}</p></a>
+        {% endfor %}
+    {% else %}
+        <h1 style="color:red;">deo co data nao ca !</h1>
+    {% endif %}
+{% endblock %}
