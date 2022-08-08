@@ -36,4 +36,4 @@ def vote(request, question_id):
         HttpResponse("loi khong co con cac gi")
     c.vote = c.vote + 1
     c.save()
-    return render(request, "polls/result.html", {"q": q, "r": c})
+    return render(request, "polls/result.html", {"q": q})
